@@ -32,7 +32,6 @@ jobs:
         args: --accept 429 --exclude "^https://zenodo.org/badge/DOI/$" --exclude "https://www.generic-mapping-tools.org/_static/gmt-logo.png/*" --exclude "``@ridge.txt" --verbose "repository/**/*.rst" "repository/**/*.md" "documentation/dev/**/*.html"
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        LYCHEE_OUT: ./lychee/out.md
 
     - name: Show output
-      run: cat ./lychee/out.md
+      run: cat /tmp/lychee/out.md
