@@ -72,7 +72,7 @@ PyGMT plotting functions can be called that add to the inset figure.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  2.311 seconds)
+   **Total running time of the script:** ( 0 minutes  2.135 seconds)
 
 
 .. _sphx_glr_download_gallery_plot_inset.py:

@@ -107,7 +107,7 @@ The ``region`` argument has to include the :math:`x` and :math:`y` axis limits a
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.430 seconds)
+   **Total running time of the script:** ( 0 minutes  1.516 seconds)
 
 
 .. _sphx_glr_download_gallery_plot_datetime-inputs.py:
