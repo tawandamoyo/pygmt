@@ -40,4 +40,4 @@ jobs:
       uses: peter-evans/create-issue-from-file@v2
       with:
         title: Link Checker Report
-        content-filepath: ./lychee/out.md
+        content-filepath: /tmp/lychee/out.md
