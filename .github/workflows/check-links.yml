@@ -27,7 +27,7 @@ jobs:
         path: documentation
 
     - name: Link Checker
-      uses: lycheeverse/lychee-action@v1.0.3
+      uses: lycheeverse/lychee-action@v1.0.4
       with:
         args: --accept 429 --exclude "^https://zenodo.org/badge/DOI/$" --exclude "https://www.generic-mapping-tools.org/_static/gmt-logo.png/*" --exclude "``@ridge.txt" --exclude "^git" --verbose "repository/**/*.rst" "repository/**/*.md" "documentation/dev/**/*.html"
       env:
