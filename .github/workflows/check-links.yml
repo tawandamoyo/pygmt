@@ -29,9 +29,15 @@ jobs:
     - name: Link Checker
       uses: lycheeverse/lychee-action@v1.0.4
       with:
+        # Notes:
+        # - 419: Too many requests
+        # - Have to exclude some URLs because they're known to be invalid.
         args: --accept 429 --exclude "^https://zenodo.org/badge/DOI/$" --exclude "https://www.generic-mapping-tools.org/_static/gmt-logo.png/*" --exclude "``@ridge.txt" --exclude "^git" --verbose "repository/**/*.rst" "repository/**/*.md" "documentation/dev/**/*.html"
       env:
-        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Show output
-      run: cat /tmp/lychee/out.md
+    - name: Create Issue From File
+      uses: peter-evans/create-issue-from-file@v2
+      with:
+        title: Link Checker Report
+        content-filepath: ./lychee/out.md
